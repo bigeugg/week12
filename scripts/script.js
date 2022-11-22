@@ -3,8 +3,9 @@ const clickButton = document.querySelector('.click-me');
 
 function clickHandler()
 {
-    alert("You clicked me!")
+    alert("You clicked me!");
+    // clickButton.removeEventListener("click", clickHandler); //removes the function (alert()) after one click
 }
+clickButton.addEventListener("click", clickHandler, {once:true}); //gives it to us once
 
-clickButton.addEventListener("click", clickHandler);
 
