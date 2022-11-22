@@ -10,11 +10,22 @@ clickButton.addEventListener("click", clickHandler, {once:true}); //gives it to 
 
 
 
-const pink = document.querySelector(".body");
-
 function changeBGPink()
 {
     // document.body.style.backgroundColor = `pink` //this way was done in quiz: one way
     document.body.classList.add("pinkBG");
 }
 clickButton.addEventListener('click', changeBGPink)
+
+function changeText()
+{
+    if (clickButton.textContent === 'Click Me!')
+    {
+        clickButton.textContent = 'clicked!'
+    }
+    else if (clickButton.textContent === 'clicked!')
+    {
+        clickButton.textContent = 'Click Me!'
+    }
+}
+clickButton.addEventListener('click', changeText)
